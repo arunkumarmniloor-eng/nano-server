@@ -1,15 +1,8 @@
 pipeline {
     agent any
-
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/arunkumarmniloor-eng/nano-server.git'
-            }
-        }
-
-        stage('Build Docker Image') {
+               stage('Build Docker Image') {
             steps {
                 sh 'docker build -t nano-backend:latest .'
             }
