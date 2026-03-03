@@ -16,8 +16,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 --name nano-container nano-backend:latest'
-            }
+               sh 'docker run -d -p 3001:3000 --name nano-container nano-backend:latest'            }
         }
     }
 }
